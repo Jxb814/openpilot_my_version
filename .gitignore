@@ -16,6 +16,9 @@ a.out
 
 /docs_site/
 
+*.png
+*.csv
+*.zst
 *.mp4
 *.dylib
 *.DSYM
