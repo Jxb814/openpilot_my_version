@@ -61,14 +61,14 @@ ACC_G = 9.81
 wheelbase = 2.90  # Hyundai Palisade
 steering_ratio = 15.6*1.15  # Hyundai Palisade ? not the same in the comma device
 # calibration
-# input_folder = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000026--c7b3f58ee5/"
-# output_csv = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000026--c7b3f58ee5/combined.csv"
-# input_folder = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000027--0019206325/"
-# input_folder = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000028--a23c9fe785/"
+# input_folder = "./tools/Downloads/b330cc9641b49158/00000026--c7b3f58ee5/"
+# output_csv = "./tools/Downloads/b330cc9641b49158/00000026--c7b3f58ee5/combined.csv"
+# input_folder = "./tools/Downloads/b330cc9641b49158/00000027--0019206325/"
+# input_folder = "./tools/Downloads/b330cc9641b49158/00000028--a23c9fe785/"
 
 # without trailer
-# input_folder = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000025--b269abff9d/"
-# output_csv = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000025--b269abff9d/combined.csv"
+# input_folder = "./tools/Downloads/b330cc9641b49158/00000025--b269abff9d/"
+# output_csv = "./tools/Downloads/b330cc9641b49158/00000025--b269abff9d/combined.csv"
 
 # # with trailer
 input_folder = "./tools/Downloads/b330cc9641b49158/0000000c--22e39c2f91/"
