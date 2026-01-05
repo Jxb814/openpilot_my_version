@@ -17,6 +17,7 @@ a.out
 /docs_site/
 
 *.Identifier
+*.txt
 *.png
 *.csv
 *.zst
