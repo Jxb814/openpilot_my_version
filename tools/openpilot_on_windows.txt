@@ -1,0 +1,28 @@
+WSL2 is neccessary!
+
+install Ubuntu 24.04 from windows cmd, set username and password
+https://documentation.ubuntu.com/wsl/stable/howto/install-ubuntu-wsl2/
+wsl --install -d Ubuntu-24.04
+
+https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
+vscode should also be installed in windows system
+run vscode from Ubuntu-24.04
+code .
+git clone https://github.com/commaai/openpilot.git (do not use company wifi)
+
+
+follow the tool setup
+source .venv/bin/activate
+
+In order to install a few more packages for data processing, we need the following commands
+python -m ensurepip --upgrade
+
+python -m pip install --upgrade pip
+
+python -m pip install pandas, seaborn, statsmodels
+
+
+sudo apt update
+sudo apt install python3-tk
+
+python /home/hatci/openpilot/tools/plotjuggler/download_all.py b330cc9641b49158/00000025--b269abff9d

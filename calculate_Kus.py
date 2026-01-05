@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib
 from matplotlib import pyplot as plt
 import glob
 import os
@@ -70,8 +71,8 @@ steering_ratio = 15.6*1.15  # Hyundai Palisade ? not the same in the comma devic
 # output_csv = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/00000025--b269abff9d/combined.csv"
 
 # # with trailer
-input_folder = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/0000000c--22e39c2f91/"
-output_csv = "/home/hatci/openpilot/tools/Downloads/b330cc9641b49158/0000000c--22e39c2f91/combined.csv"
+input_folder = "./tools/Downloads/b330cc9641b49158/0000000c--22e39c2f91/"
+output_csv = "./tools/Downloads/b330cc9641b49158/0000000c--22e39c2f91/combined.csv"
 
 # Collect all CSV paths
 csv_files = glob.glob(os.path.join(input_folder, "*_selected_data.csv"))
@@ -163,6 +164,7 @@ r_value = corr_matrix[0, 1]
 
 print(f"R-value: {r_value}")
 
+matplotlib.use("TkAgg")
 plt.figure(figsize = [6,5])
 plt.scatter(x/ACC_G, adjusted_steering/ACC_G, s = 2)
 plt.plot(x/ACC_G,fitted_line/ACC_G, color = 'red', label = 'Linear Fit')
