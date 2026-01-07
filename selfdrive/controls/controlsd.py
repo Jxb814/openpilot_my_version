@@ -76,6 +76,8 @@ class Controls:
     self.VM.update_params(x, sr)
 
     steer_angle_without_offset = math.radians(CS.steeringAngleDeg - lp.angleOffsetDeg)
+    # here the curvature is corrected based on live parameters, we can replace it with K_us.
+    # K_us is recursively estimated, only the pervious value matters. Maybe we do not need a global param for it.
     self.curvature = -self.VM.calc_curvature(steer_angle_without_offset, CS.vEgo, lp.roll)
 
     # Update Torque Params

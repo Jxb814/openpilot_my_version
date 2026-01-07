@@ -48,12 +48,12 @@ def create_map(track_size=60):
 
 
 class MetaDriveBridge(SimulatorBridge):
-  TICKS_PER_FRAME = 5
+  TICKS_PER_FRAME = 1    # metadrive default is 5
 
   def __init__(self, dual_camera, high_quality, test_duration=math.inf, test_run=False):
     super().__init__(dual_camera, high_quality)
 
-    self.should_render = False
+    self.should_render = False   # False does not show metadrivewindow
     self.test_run = test_run
     self.test_duration = test_duration if self.test_run else math.inf
 
@@ -69,7 +69,7 @@ class MetaDriveBridge(SimulatorBridge):
       use_render=self.should_render,
       vehicle_config=dict(
         enable_reverse=False,
-        render_vehicle=False,
+        render_vehicle=False,  # metadrive could not run with this enabled
         image_source="rgb_road",
       ),
       sensors=sensors,
@@ -84,7 +84,7 @@ class MetaDriveBridge(SimulatorBridge):
       traffic_density=0.0, # traffic is incredibly expensive
       map_config=create_map(),
       decision_repeat=1,
-      physics_world_step_size=self.TICKS_PER_FRAME/100,
+      physics_world_step_size=self.TICKS_PER_FRAME/20,   # default is 100, ratio should be 5/100
       preload_models=False,
       show_logo=False,
       anisotropic_filtering=False
